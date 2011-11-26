@@ -41,6 +41,8 @@
     <string name="ui_status_bar_title">Ajustes na barra de status</string>
     <string name="ui_status_bar_clock_title">Mostrar relógio</string>
     <string name="ui_status_bar_clock_summary">Se desabilitado, esconde o relógio da barra de status</string>
+    <string name="ui_status_bar_cm_battery_title">Percentual de bateria</string>
+    <string name="ui_status_bar_cm_battery_summary">Mostrar percentual de bateria e um mini ícone de bateria. Desabilite se o tema quebrar o layout</string>
 
     <!-- User interface : LED Notifications -->
     <string name="trackball_title">Notificações de LED</string>
@@ -93,12 +95,6 @@
     <string name="trackball_category_remove_title">Remover categoria</string>
     <string name="trackball_category_remove_summary">Remover uma categoria da lista</string>
     <string name="trackball_reset_all">Resetar todas as cores e categorias.</string>
-
-    <!-- Trackball Settings : Force modes -->
-    <string name="trackball_force_mode_application">Usar configurações da aplicação</string>
-    <string name="trackball_force_mode_off">Forçar LED a ficar desligado</string>
-    <string name="trackball_force_mode_events">Forçar LED a acender em eventos</string>
-    <string name="trackball_force_mode_on">Forçar LED a acender</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">ALERTA: Pode consumir mais bateria</string>
@@ -331,10 +327,13 @@
     <string name="pref_screentimeout_mode_summary">Escolha como o botão de Tempo Esgotado de Tela alterna o modo</string>
     <string name="pref_ring_mode_title">Modos de som</string>
     <string name="pref_ring_mode_summary">Escolha como o botão de som alterna o modo</string>
-    <string name="cm_sound_mode_silent">Silencioso</string>
-    <string name="cm_sound_mode_vibrate">Vibrar</string>
-    <string name="cm_sound_mode_sound">Som</string>
-    <string name="cm_sound_mode_soundVibrate">Som+Vibrar</string>
+    <string name="cm_sound_mode_soundVib_vib">Som+Vibrar/Vibrar</string>
+    <string name="cm_sound_mode_sound_vib">Som/Vibrar</string>
+    <string name="cm_sound_mode_sound_silent">Som/Vibrar</string>
+    <string name="cm_sound_mode_soundVib_vib_silent">Som+Vib/Vib/Silencioso</string>
+    <string name="cm_sound_mode_sound_vib_silent">Som/Vibrar/Silencioso</string>
+    <string name="cm_sound_mode_soundVib_sound_vib_silent">Som+Vibrar/Som/Vibrar/Silencioso</string>
+    <string name="cm_sound_mode_vib_silent">Vibrar/Silencioso</string>
     <string name="pref_flash_mode_title">Modo de Flash</string>
     <string name="pref_flash_mode_summary">Escolha Alto / Raio da Morte</string>
 
@@ -716,12 +715,4 @@
     <string name="pref_lockscreen_ring_custom_apps_dialog_add">Adicionar</string>
     <string name="pref_lockscreen_ring_custom_apps_dialog_remove">Remover</string>
     <string name="pref_lockscreen_ring_custom_apps_notset">Não Acionar</string>
-    <string name="pref_use_16bpp_alpha_title">Usar transparência 16bit</string>
-    <string name="pref_use_16bpp_alpha_summary">Usando transparência 16bit pode melhorar a performance de rolagem, mas pode causar artefatos visuais (requer reinicialização)</string>
-    <string name="cm_brightness_mode_dim">Escuro</string>
-    <string name="cm_brightness_mode_auto">Auto</string>
-    <string name="pref_slider_unlock_title">Destravar ao abrir o teclado</string>
-    <string name="pref_slider_unlock_summary">Ao abrir o teclado o dispositivo é destravado</string>
-    <string name="pref_share_screenshot_title">Compartilhar capturas de tela</string>
-    <string name="pref_share_screenshot_summary">Mostrar menu para compartilhar quando capturar a tela</string>
 </resources>

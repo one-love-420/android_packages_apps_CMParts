@@ -36,12 +36,6 @@
     <item>Nichts (Standard)</item>
   </string-array>
 
-  <string-array name="entries_status_bar_battery">
-    <item>Symbol (Standard)</item>
-    <item>Prozent</item>
-    <item>Versteckt</item>
-  </string-array>
-
   <string-array name="pref_overscroll_effect_entries">
     <item>Kein</item>
     <item>Glimmende Kante</item>
@@ -66,6 +60,13 @@
     <item>6 (Langsam)</item>
   </string-array>
 
+  <string-array name="pref_trackball_force_mode_entries">
+    <item>Anwendungseinstellung</item>
+    <item>LED immer deaktivieren</item>
+    <item>LED nur bei Ereignisbenachrichtigung</item>
+    <item>LED immer aktivieren</item>
+  </string-array>
+
   <string-array name="pref_lockscreen_delay_entries">
     <item>Sofort</item>
     <item>1 Sekunde</item>
@@ -87,11 +88,11 @@
   </string-array>
 
   <string-array name="entries_light_filter_window">
-    <item>2 Sekunden</item>
-    <item>5 Sekunden</item>
     <item>10 Sekunden</item>
     <item>20 Sekunden</item>
     <item>30 Sekunden</item>
+    <item>40 Sekunden</item>
+    <item>50 Sekunden</item>
     <item>60 Sekunden</item>
   </string-array>
 
@@ -160,6 +161,13 @@
   <string-array name="entries_sound_limitvol">
     <item>Abgeschwächte Voreinstellung</item>
     <item>Musik-Lautstärke (Standard)</item>
+  </string-array>
+
+  <string-array name="entries_brightness_widget" formatted="false">
+    <item>Auto&#x2009;/&#x2009;Dunkel&#x2009;/\n40&#x2009;%&#x2009;/&#x2009;100&#x2009;%</item>
+    <item>Auto&#x2009;/&#x2009;Dunkel&#x2009;/\n25&#x2009;%&#x2009;/&#x2009;50&#x2009;%&#x2009;/&#x2009;75&#x2009;%&#x2009;/&#x2009;100&#x2009;%</item>
+    <item>Auto&#x2009;/\n25&#x2009;%&#x2009;/&#x2009;100&#x2009;%</item>
+    <item>Dunkel&#x2009;/&#x2009;100&#x2009;%</item>
   </string-array>
 
   <string-array name="entries_network_widget">
@@ -234,12 +242,6 @@
     <item>1 Tag</item>
     <item>3 Tage</item>
     <item>1 Woche</item>
-  </string-array>
-
-  <string-array name="pref_lockscreen_calendar_show_event_metadata_entries">
-    <item>Nicht anzeigen</item>
-    <item>Nur die erste Zeile anzeigen</item>
-    <item>Alles anzeigen</item>
   </string-array>
 
   <string-array name="entries_vol_actions">

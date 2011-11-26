@@ -43,6 +43,13 @@
         <item>6 (Långsam)</item>
     </string-array>
 
+    <string-array name="pref_trackball_force_mode_entries">
+        <item>Använd applikationens inställningar</item>
+        <item>Släck lysdiod</item>
+        <item>Tänd lysdiod vid händelser</item>
+        <item>Tänd lysdiod</item>
+    </string-array>
+
     <string-array name="pref_lockscreen_delay_entries">
         <item>Omedelbart</item>
         <item>1s</item>
@@ -107,6 +114,13 @@
     <string-array name="entries_sound_limitvol">
         <item>Dämpad systeminställning</item>
         <item>Musikvolym (standard)</item>
+    </string-array>
+
+   <string-array name="entries_brightness_widget" formatted="false">
+        <item>Auto/Dim/40%/100%</item>
+        <item>Auto/Dim/25%/50%/75%/100%</item>
+        <item>Auto/25%/100%</item>
+        <item>Dim/100%</item>
     </string-array>
 
     <string-array name="entries_network_widget">

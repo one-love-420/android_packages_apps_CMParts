@@ -52,11 +52,11 @@
     </string-array>
 
     <string-array name="entries_light_filter_window">
-        <item>2sek</item>
-        <item>5sek</item>
         <item>10sek</item>
         <item>20sek</item>
         <item>30sek</item>
+        <item>40sek</item>
+        <item>50sek</item>
         <item>60sek</item>
     </string-array>
 
@@ -112,6 +112,13 @@
     <string-array name="entries_sound_limitvol">
         <item>Vaimennetut järjestelmäasetukset</item>
         <item>Musiikin äänenvoimakkuus (oletus)</item>
+    </string-array>
+
+   <string-array name="entries_brightness_widget" formatted="false">
+        <item>Auto/Himmeä/40%/100%</item>
+        <item>Auto/Himmeä/25%/50%/75%/100%</item>
+        <item>Auto/25%/100%</item>
+        <item>Himmeä/100%</item>
     </string-array>
 
     <string-array name="entries_network_widget">

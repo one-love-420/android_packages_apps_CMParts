@@ -97,6 +97,8 @@
     <string name="ui_status_bar_am_pm_summary">Zobraziť AM/PM vedľa hodín</string>
     <string name="ui_status_bar_clock_title">Zobraziť hodiny</string>
     <string name="ui_status_bar_clock_summary">Ak je vypnuté, hodiny v stavovom riadku sú zakázané</string>
+    <string name="ui_status_bar_cm_battery_title">Percentá batérie</string>
+    <string name="ui_status_bar_cm_battery_summary">Zobraziť percentá batérie s malou ikonou batérie. Zakážte ak témy vyzerajú zle</string>
     <string name="ui_status_bar_compact_carrier_title">Zmenšiť názov operátora</string>
     <string name="ui_status_bar_compact_carrier_summary">Použiť alternatívny vzhľad notifikačného menu s malým názvom operátora</string>
     <string name="ui_status_bar_toggle_brightness">Ovládanie jasu pomocou stavového riadku</string>
@@ -142,6 +144,7 @@
     <string name="msg_color_picker">Stlačte strednú farbu pre potvrdenie.\nStlačte späť pre zrušenie</string>
     <!-- User interface: LED notifications -->
     <string name="group_settings">Nastavenia</string>
+    <string name="trackball_notifications_title">Farba LED upozornení</string>
     <string name="dialog_color_trackball">Vyberte farbu</string>
     <string name="dialog_blink_trackball">Vyberte rýchlosť blikania</string>
     <string name="color_trackball_flash_title">Farba blesku</string>
@@ -211,11 +214,6 @@
     <string name="trackball_color_entry_light_blue">Svetlo modrá</string>
     <string name="trackball_color_entry_random">Náhodná</string>
     <string name="trackball_color_entry_amber">Tmavá</string>
-    <!-- Trackball Settings : Force modes -->
-    <string name="trackball_force_mode_application">Podľa nastavenia aplikácie</string>
-    <string name="trackball_force_mode_off">Vynútiť LED vyp</string>
-    <string name="trackball_force_mode_events">Vynútiť LED zap pre udalosti</string>
-    <string name="trackball_force_mode_on">Vynútiť LED zap</string>
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">UPOZORNENIE: Môže spôsobiť vybíjanie batérie</string>
     <string name="notification_battery_warning">Tejto možnosti bolo preukázané zvýšené vybíjanie batérie o ~3% za hodinu. Ak zaznamenáte zvýšené vybíjanie batérie pri použití pulzujúcich svetiel trackballu, tak je to pre túto možnosť. Nepovoľujte ak nechcete riskovať zvýšené vybíjanie.</string>
@@ -374,6 +372,7 @@
     <string name="performance_settings_warning">Nastavenie zmenia výkon systému, potenciálne aj k horšiemu. Sú tu pre experimentovanie a žiadame, aby ste nehlásili chyby, ak zmeníte niektorú z predvolených hodnôt</string>
     <!-- Application Settings -->
     <string name="application_settings_title">Nastavenia aplikácií</string>
+    <string name="application_settings_summary">Viaceré nastavenia aplikácií, ako napr. umiestnenie inštalácie</string>
     <string name="pref_switch_storage_title">Použiť vnútorné úložisko</string>
     <string name="pref_switch_storage_summary_on">Používa sa rozšírenie vnútornej pamäte pre app a médiá</string>
     <string name="pref_switch_storage_summary_off">Používa sa vymeniteľná karta pre app a médiá</string>
@@ -466,10 +465,13 @@
     <string name="pref_screentimeout_mode_summary">Vyberte ako sa budú meniť časy časovača obrazovky</string>
     <string name="pref_ring_mode_title">Módy zvuku</string>
     <string name="pref_ring_mode_summary">Vyberte ako sa budú meniť módy zvuku</string>
-    <string name="cm_sound_mode_silent">Ticho</string>
-    <string name="cm_sound_mode_vibrate">Vibrácia</string>
-    <string name="cm_sound_mode_sound">Zvuk</string>
-    <string name="cm_sound_mode_soundVibrate">Zvuk+Vibrácia</string>
+    <string name="cm_sound_mode_soundVib_vib">Zvuk+Vibrácia/Vibrácia</string>
+    <string name="cm_sound_mode_sound_vib">Zvuk/Vibrácia</string>
+    <string name="cm_sound_mode_sound_silent">Zvuk/Ticho</string>
+    <string name="cm_sound_mode_soundVib_vib_silent">Zvuk+Vib/Vib/Ticho</string>
+    <string name="cm_sound_mode_sound_vib_silent">Zvuk/Vibrácia/Ticho</string>
+    <string name="cm_sound_mode_soundVib_sound_vib_silent">Zvuk+Vibrácia/Zvuk/Vibrácia/Ticho</string>
+    <string name="cm_sound_mode_vib_silent">Vibrácia/Ticho</string>
     <string name="pref_flash_mode_title">Mód blesku</string>
     <string name="pref_flash_mode_summary">Vybrať Silný / Smrteľný Lúč</string>
     <!-- Backlight -->

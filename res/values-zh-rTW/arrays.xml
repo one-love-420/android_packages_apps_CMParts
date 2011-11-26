@@ -49,14 +49,6 @@
 
     <!-- skipping untranslatable /resources:0/string-array:name=values_status_bar_am_pm -->
 
-    <string-array name="entries_status_bar_battery">
-        <item>圖示（預設）</item>
-        <item>百分比</item>
-        <item>隱藏</item>
-    </string-array>
-
-    <!-- skipping untranslatable /resources:0/string-array:name=values_status_bar_battery -->
-
      <!-- skipping untranslatable /resources:0/string-array:name=entries_status_bar_signal -->
 
      <!-- skipping untranslatable /resources:0/string-array:name=values_status_bar_signal -->
@@ -96,7 +88,12 @@
 
     <!-- skipping untranslatable /resources:0/string-array:name=pref_trackball_blink_rate_values -->
 
-    <!-- skipping untranslatable /resources:0/string-array:name=pref_trackball_force_mode_entries -->
+    <string-array name="pref_trackball_force_mode_entries">
+        <item>使用應用程式設定</item>
+        <item>強制關閉 LED</item>
+        <item>為進行中事件強制開啟 LED</item>
+        <item>強制開啟 LED</item>
+    </string-array>
 
     <!-- skipping untranslatable /resources:0/string-array:name=pref_trackball_force_mode_values -->
 
@@ -125,11 +122,11 @@
     <!-- skipping untranslatable /resources:0/string-array:name=pref_compcache_size_values -->
 
     <string-array name="entries_light_filter_window">
-        <item>2秒</item>
-        <item>5秒</item>
         <item>10秒</item>
         <item>20秒</item>
         <item>30秒</item>
+        <item>40秒</item>
+        <item>50秒</item>
         <item>60秒</item>
     </string-array>
 
@@ -214,7 +211,12 @@
 
     <!-- skipping untranslatable /resources:0/string-array:name=values_sound_limitvol -->
 
-   <!-- skipping untranslatable /resources:0/string-array:formatted=false&name=entries_brightness_widget -->
+   <string-array name="entries_brightness_widget" formatted="false">
+        <item>自動/暗淡/40%/100%</item>
+        <item>自動/暗淡/25%/50%/75%/100%</item>
+        <item>自動/25%/100%</item>
+        <item>暗淡/100%</item>
+    </string-array>
 
    <!-- skipping untranslatable /resources:0/string-array:name=values_brightness_widget -->
 
@@ -317,14 +319,6 @@
     </string-array>
 
     <!-- skipping untranslatable /resources:0/string-array:name=pref_lockscreen_calendar_lookahead_values -->
-
-    <string-array name="pref_lockscreen_calendar_show_event_metadata_entries">
-        <item>不要顯示</item>
-        <item>顯示首行</item>
-        <item>顯示全文</item>
-    </string-array>
-
-    <!-- skipping untranslatable /resources:0/string-array:name=pref_lockscreen_calendar_show_event_metadata_values -->
 
     <string-array name="pref_overscroll_effect_entries">
         <item>無</item>

@@ -97,7 +97,16 @@ public class NotificationActivity extends PreferenceActivity {
             if (items.length == 4) {
                 item.category = "";
             } else {
-                item.category = items[4];
+                /* Category names might include the character '=',
+                   try to handle that case as well */
+                StringBuilder builder = new StringBuilder();
+                for (int i = 4; i < items.length; i++) {
+                    if (i > 4) {
+                        builder.append("=");
+                    }
+                    builder.append(items[i]);
+                }
+                item.category = builder.toString();
             }
 
             return item;
@@ -126,13 +135,8 @@ public class NotificationActivity extends PreferenceActivity {
         } else if (pref == mAdvancedPref) {
             Intent intent = new Intent(this, AdvancedActivity.class);
             startActivityForResult(intent, REQ_ADVANCED);
-        } else if (key != null && (key.startsWith("app_") || key.startsWith("cat_"))) {
+        } else if (key != null && key.startsWith("app_")) {
             String pkg = key.substring(4);
-
-            if (key.startsWith("cat_")) {
-                pkg = PackageSettingsActivity.CATEGORY_PACKAGE_PREFIX + pkg;
-            }
-
             PackageSettings settings = mPackages.get(pkg);
             Intent intent = new Intent(this, PackageSettingsActivity.class);
 
@@ -333,7 +337,6 @@ public class NotificationActivity extends PreferenceActivity {
         unconfGroup.setKey("applications_unconf");
         unconfGroup.setTitle(getResources().getString(R.string.trackball_category_unconfigured));
         parent.addPreference(unconfGroup);
-        createEditCategorySettings(unconfGroup);
 
         for (String category : getCategoryList()) {
             PreferenceScreen categoryGroup = getPreferenceManager().createPreferenceScreen(this);
@@ -344,7 +347,6 @@ public class NotificationActivity extends PreferenceActivity {
             }
             categoryGroup.setTitle(category);
             parent.addPreference(categoryGroup);
-            createEditCategorySettings(categoryGroup);
         }
 
         for (Map.Entry<String, PackageInfo> pkgEntry : sortedPackages.entrySet()) {
@@ -371,16 +373,8 @@ public class NotificationActivity extends PreferenceActivity {
             }
         }
 
-        if (unconfGroup.getPreferenceCount() == 1) { // 1 because of the "edit category setting"
+        if (unconfGroup.getPreferenceCount() == 0) {
             parent.removePreference(unconfGroup);
         }
-    }
-
-    private void createEditCategorySettings(PreferenceScreen cat) {
-        Preference editCat = getPreferenceManager().createPreferenceScreen(this);
-        editCat.setKey("cat_" + cat.getKey().substring("applications_".length()));
-        editCat.setTitle(R.string.trackball_category_edit_title);
-        editCat.setSummary(R.string.trackball_category_edit_summary);
-        cat.addPreference(editCat);
     }
 }

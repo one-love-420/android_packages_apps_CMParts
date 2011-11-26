@@ -22,14 +22,6 @@
         <item>12</item>
         <item>15</item>
     </string-array>
-
-    <string-array name="entries_heapsize">
-        <item>12 MB</item>
-        <item>16 MB</item>
-        <item>24 MB</item>
-        <item>32 MB</item>
-        <item>48 MB</item>
-    </string-array>
   
     <string-array name="entries_install_location">
         <item>自动</item>
@@ -72,11 +64,11 @@
     </string-array>
 
     <string-array name="entries_light_filter_window">
-        <item>2 秒</item>
-        <item>5 秒</item>
         <item>10 秒</item>
         <item>20 秒</item>
         <item>30 秒</item>
+        <item>40 秒</item>
+        <item>50 秒</item>
         <item>60 秒</item>
     </string-array>
 
@@ -147,6 +139,13 @@
         <item>音乐音量 (默认)</item>
     </string-array>
 
+   <string-array name="entries_brightness_widget" formatted="false">
+        <item>自动 / 最暗 /40%/100%</item>
+        <item>自动 / 最暗 /25%/50%/75%/100%</item>
+        <item>自动 / 25%/100%</item>
+        <item>自动 / 100%</item>
+    </string-array>
+
     <string-array name="entries_network_widget">
         <item>2G / 3G+2G</item>  
         <item>仅 2G / 3G</item>   
@@ -200,12 +199,6 @@
         <item>有线 + 蓝牙耳机</item>
     </string-array>
 
-    <string-array name="pref_lockscreen_calendar_show_event_metadata_entries">
-        <item>不显示</item>
-        <item>显示第一行</item>
-        <item>显示所有</item>
-    </string-array>
-
     <string-array name="pref_overscroll_effect_entries">
         <item>无</item>
         <item>边缘发亮</item>
@@ -253,45 +246,4 @@
         <item>自定义程序</item>
         <item>显示 / 隐藏通知列</item>
     </string-array>
-
-    <string-array name="haptic_feedback_entries">
-        <item>跟随系统设定</item>
-        <item>启用</item>
-        <item>停用</item>
-    </string-array>
-
-    <string-array name="pref_lockscreen_widget_layout_entries">
-        <item>默认</item>
-        <item>隐藏</item>
-        <item>居中</item>
-    </string-array>
-
-    <string-array name="pref_lockscreen_calendar_lookahead_entries">
-        <item>3个小时</item>
-        <item>6个小时</item>
-        <item>12个小时</item>
-        <item>1天</item>
-        <item>3天</item>
-        <item>1周</item>
-    </string-array>
-
-    <string-array name="pref_lockscreen_background_entries">
-        <item>填充颜色</item>
-        <item>自定义图片</item>
-        <item>默认墙纸</item>
-    </string-array>
-
-    <string-array name="pref_trackball_force_mode_entries">
-	<item>使用程序默认设置</item>
-	<item>强制LED关闭</item>
-	<item>强制为所有事件开启LED</item>
-	<item>强制LED开启</item>
-    </string-array>
-
-    <string-array name="entries_status_bar_battery">
-	<item>图标(默认)</item>
-	<item>百分比</item>
-	<item>隐藏</item>
-    </string-array>
-
 </resources>

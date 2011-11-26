@@ -65,10 +65,10 @@
     <string name="ui_status_bar_title">Barre de notification</string>
     <string name="ui_status_bar_am_pm_title">Indicateur AM/PM</string>
     <string name="ui_status_bar_am_pm_summary">Affiche l\'indicateur AM/PM à côté de l\'heure</string>
-    <string name="ui_status_bar_battery_title">Batterie</string>
-    <string name="ui_status_bar_battery_summary">Style de l\'indicateur de niveau de charge</string>
     <string name="ui_status_bar_clock_title">Afficher l\'heure</string>
     <string name="ui_status_bar_clock_summary">L\'heure sera cachée de la barre si cette option est désactivée</string>
+    <string name="ui_status_bar_cm_battery_title">Pourcentage de batterie</string>
+    <string name="ui_status_bar_cm_battery_summary">Afficher le pourcentage de la batterie, en plus de l\'icône de la batterie.</string>
     <string name="ui_status_bar_compact_carrier_title">Fournisseur abrégé</string>
     <string name="ui_status_bar_compact_carrier_summary">Utilise le nom abrégé du fournisseur d\'accès GSM</string>
     <string name="ui_status_bar_toggle_brightness">Rétroéclairage</string>
@@ -97,10 +97,6 @@
     <!-- User interface : WebView -->
     <string name="pref_pinch_reflow_title">Redessiner au zoom</string>
     <string name="pref_pinch_reflow_summary">Redessine les pages web immédiatement après un zoom avec les doigts ("pinch")</string>
-
-    <!-- User interface : Share menu for screenshots -->
-    <string name="pref_share_screenshot_title">Partager Screenshots</string>
-    <string name="pref_share_screenshot_summary">Affiche le menu de partage après une capture d\'écran</string>
 
     <!-- User interface : Lock Screen -->
     <string name="pref_lockscreen_delay_title">Délai</string>
@@ -187,12 +183,6 @@
     <string name="trackball_color_entry_random">Aléatoire</string>
     <string name="trackball_color_entry_amber">Orange</string>
 
-    <!-- Trackball Settings : Force modes -->
-    <string name="trackball_force_mode_application">Paramètres application</string>
-    <string name="trackball_force_mode_off">Pas de LED</string>
-    <string name="trackball_force_mode_events">LED si événements</string>
-    <string name="trackball_force_mode_on">LED active</string>
-
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">ATTENTION : Peut vider votre batterie</string>
     <string name="notification_battery_warning">Il a été prouvé que cette option accentue l\'utilisation de la batterie d\'environ 3% par heure. Si vous constatez ce phénomène, c\'est certainement cette option qui en est la cause directe. N\'activez cette option uniquement en connaissance de cause !</string>
@@ -211,7 +201,7 @@
 
     <!-- Lockscreen Settings -->
     <string name="lockscreen_widgets_note_title">Note</string>
-    <string name="lockscreen_widgets_note_summary">Le style \'Lense\' cache tous les widgets sauf ceux pour la musique.\nLes options suivantes sont affichées afin de simplifier le changement de mode</string>
+    <string name="lockscreen_widgets_note_summary">Le style \'Lense\' cache tous les widgets sauf ceux pour la musique. Les options suivantes sont affichées afin de simplifier le changement de mode</string>
     <string name="pref_lockscreen_always_battery_title">Etat de la batterie</string>
     <string name="pref_lockscreen_always_battery_summary">Afficher l\'état de la batterie sur l\'écran de verrouillage, à tout moment</string>
     <string name="pref_lockscreen_widgets_layout_title">Position</string>
@@ -225,6 +215,8 @@
     <string name="pref_lockscreen_custom_app_activity_title">Sélectionner l\'application</string>
     <string name="pref_lockscreen_custom_icon_style_title">Icône de l\'application</string>
     <string name="pref_lockscreen_custom_icon_style_summary">Utiliser l\'icône de l\'application au lieu de celle par défaut</string>
+    <string name="pref_lockscreen_custom_app_toggle_title">Geste supplémentaire</string>
+    <string name="pref_lockscreen_custom_app_toggle_summary">Utiliser un autre slider pour exécuter une application perso.</string>
     <string name="pref_lockscreen_rotary_unlock_down_title">Déverrouiller en bas</string>
     <string name="pref_lockscreen_rotary_unlock_down_summary">Glisser vers le bas déverrouille. Glisser à droite démarre l\'application</string>
     <string name="pref_lockscreen_rotary_hide_arrows_title">Masquer flèches</string>
@@ -235,12 +227,6 @@
     <string name="pref_lockscreen_always_music_controls_summary">Toujours afficher les contrôles permettant de commander la musique, même sans lecture en cours</string>
     <string name="pref_lockscreen_quick_unlock_control_title">Déverrouillage rapide</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">Une pression sur OK n\'est plus nécessaire lors de la saisie d\'un PIN ou mot de passe. Effacer compte comme une erreur.</string>
-    <string name="lockscreen_style_options_title">Options spécifiques</string>
-    <string name="pref_lockscreen_custom_app_toggle_title">Geste supplémentaire</string>
-    <string name="pref_lockscreen_custom_app_toggle_tab_summary">Ajouter un second bouton pour exécuter une application</string>
-    <string name="pref_lockscreen_custom_app_toggle_rotary_summary">Ajouter un bouton pour exécuter une application</string>
-    <string name="pref_lockscreen_custom_app_toggle_ring_summary">Ajouter un troisième bouton pour exécuter une application</string>
-
     <string name="pref_lockscreen_style_title">Style</string>
     <string name="pref_lockscreen_style_summary">Choisir le style de l\'écran de verrouillage</string>
     <string name="pref_in_call_style_title">Appels entrants</string>
@@ -261,27 +247,21 @@
     <string name="pref_lockscreen_disable_on_security_title">Inactif si sécurisé</string>
     <string name="pref_lockscreen_disable_on_security_summary">Désactive l\'écran de verrouillage si l\'écran de sécurité est activé (Code PIN, Mot de passe)</string>
     <string name="lockscreen_calendar_title">Agenda</string>
-    <string name="pref_lockscreen_calendar_alarm_title">Prochain événement</string>
+    <string name="pref_lockscreen_calendar_alarm_title">Evénements à venir</string>
     <string name="pref_lockscreen_calendar_alarm_summary">Afficher l\'heure et le titre du prochain événement</string>
     <string name="pref_lockscreen_calendars_title">Agendas</string>
-    <string name="pref_lockscreen_calendars_summary">Sélectionner les agendas à utiliser</string>
+    <string name="pref_lockscreen_calendars_summary">Sélectionner les agendas à prendre en compte</string>
     <string name="pref_lockscreen_calendar_reminders_only_title">Rappels uniquement</string>
     <string name="pref_lockscreen_calendar_reminders_only_summary">N\'afficher que les événements avec rappel (alarme)</string>
     <string name="pref_lockscreen_calendar_lookahead_title">Période</string>
-    <string name="pref_lockscreen_calendar_lookahead_summary">Plage de recherche des événements à venir</string>
-    <string name="pref_lockscreen_calendar_show_location_title">Afficher le lieu</string>
-    <string name="pref_lockscreen_calendar_show_location_summary">Affiche le lieu de l\'événement</string>
-    <string name="pref_lockscreen_calendar_show_description_title">Afficher la description</string>
-    <string name="pref_lockscreen_calendar_show_description_summary">Affiche la description complète de l\'événement</string>
+    <string name="pref_lockscreen_calendar_lookahead_summary">Plage de recherche des événements à prendre en compte</string>
 
     <!-- Input Settings -->
     <string name="input_settings_title">Paramètres des entrées</string>
-    <string name="pref_trackball_wake_title">Réveil par trackball</string>
-    <string name="pref_trackball_wake_summary">Une pression sur le trackball réveille le téléphone</string>
-    <string name="pref_trackball_unlock_title">Déverrouillage par trackball</string>
-    <string name="pref_trackball_unlock_summary">Une pression sur le trackball déverrouille le téléphone</string>
-    <string name="pref_slider_unlock_title">Déverrouillage par clavier</string>
-    <string name="pref_slider_unlock_summary">L\'ouverture du clavier physique déverrouille le téléphone</string>
+    <string name="pref_trackball_wake_title">Réveil par la trackball</string>
+    <string name="pref_trackball_wake_summary">Une pression sur la trackball réveille le téléphone</string>
+    <string name="pref_trackball_unlock_title">Déverrouillage par la trackball</string>
+    <string name="pref_trackball_unlock_summary">Une pression sur la trackball déverrouille le téléphone</string>
     <string name="pref_menu_unlock_title">Déverrouillage par menu</string>
     <string name="pref_menu_unlock_summary">Une pression sur le bouton menu déverrouille le téléphone</string>
     <string name="pref_volume_wake_title">Eveil par boutons volume</string>
@@ -482,18 +462,12 @@
     <string name="title_button_modes">Modes de fonctionnement des boutons</string>
     <string name="pref_brightness_mode_title">Modes de luminosité</string>
     <string name="pref_brightness_mode_summary">Sélection des modes de fonctionnement du bouton Luminosité</string>
-    <string name="cm_brightness_mode_auto">Auto</string>
-    <string name="cm_brightness_mode_dim">Dim</string>
     <string name="pref_network_mode_title">Modes 2G/3G</string>
     <string name="pref_network_mode_summary">Choisir comment le bouton 2G/3G se comportera</string>
     <string name="pref_screentimeout_mode_title">Modes Timeout de l\'écran</string>
     <string name="pref_screentimeout_mode_summary">Sélection des modes de fonctionnement du bouton Timeout de l\'écran</string>
     <string name="pref_ring_mode_title">Modes Sonnerie</string>
     <string name="pref_ring_mode_summary">Sélection des modes de fonctionnement du bouton Sonnerie</string>
-    <string name="cm_sound_mode_silent">Silencieux</string>
-    <string name="cm_sound_mode_vibrate">Vibreur</string>
-    <string name="cm_sound_mode_sound">Son</string>
-    <string name="cm_sound_mode_soundVibrate">Son et vibreur</string>
     <string name="pref_flash_mode_title">Mode flash</string>
     <string name="pref_flash_mode_summary">Choisir la puissance du flash : Haute ou Death Ray</string>
 
@@ -585,13 +559,9 @@
     <string name="quiet_hours_still">Désactiver les vibrations</string>
     <string name="quiet_hours_still_on">Le téléphone ne vibrera pas</string>
     <string name="quiet_hours_still_off">Le téléphone vibrera normalement</string>
-    <string name="quiet_hours_dim">Puissance des LEDs</string>
-    <string name="quiet_hours_dim_on">La puissance des LEDs est réduite (si possible)</string>
-    <string name="quiet_hours_dim_off">Fonctionnement normal</string>
-    <string name="quiet_hours_haptic">Désactiver retour haptique</string>
-    <string name="quiet_hours_haptic_on">Le retour haptique est désactivé</string>
-    <string name="quiet_hours_haptic_off">Le retour haptique est actif</string>
-
+    <string name="quiet_hours_dim">Diminuer éclairage LED</string>
+    <string name="quiet_hours_dim_on">La LED éclairera avec moins de puissance</string>
+    <string name="quiet_hours_dim_off">La LED éclairera avec le maximum de puissance</string>
 
     <string name="cmstats_title">Statistiques anonymes</string>
     <string name="cmstats_summary">Aidez CyanogenMod en participant à l\'envoi de statistiques anonymes. Ceci permet de comptabiliser le nombre d\'installations actives par type d\'appareil</string>

@@ -37,6 +37,13 @@
         <item>6 (Медленно)</item>
     </string-array>
 
+    <string-array name="pref_trackball_force_mode_entries">
+        <item>Исп. настройки приложений</item>
+        <item>Принудит. выкл. светодиода</item>
+        <item>Принудит. вкл. светодиода для событий</item>
+        <item>Принудит. вкл. светодиода</item>
+    </string-array>
+
     <string-array name="pref_lockscreen_delay_entries">
         <item>Немедленно</item>
         <item>1 секунда</item>
@@ -51,11 +58,11 @@
     </string-array>
 
     <string-array name="entries_light_filter_window">
-        <item>2 секунд</item>
-        <item>5 секунд</item>
         <item>10 секунд</item>
         <item>20 секунд</item>
         <item>30 секунд</item>
+        <item>40 секунд</item>
+        <item>50 секунд</item>
         <item>60 секунд</item>
     </string-array>
 
@@ -133,6 +140,13 @@
         <item>10</item>
         <item>11</item>
         <item>12 (строгий)</item>
+    </string-array>
+
+   <string-array name="entries_brightness_widget" translatable="false">
+        <item>Авто/Тусклый/40%/100%</item>
+        <item>Авто/Тусклый/25%/50%/75%/100%</item>
+        <item>Авто/25%/100%</item>
+        <item>Тусклый/100%</item>
     </string-array>
 
     <string-array name="entries_network_widget" translatable="false">
@@ -246,18 +260,6 @@
         <item>1 день</item>
         <item>3 дня</item>
         <item>1 неделя</item>
-    </string-array>
-
-    <string-array name="entries_status_bar_battery">
-        <item>Иконка (По умолчанию)</item>
-        <item>Процентный</item>
-        <item>Скрытый</item>
-    </string-array>
-
-    <string-array name="pref_lockscreen_calendar_show_event_metadata_entries">
-        <item>Не показывать</item>
-        <item>Показывать первую строку</item>
-        <item>Показывать всё</item>
     </string-array>
 
 </resources>
