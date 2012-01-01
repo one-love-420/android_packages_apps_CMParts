@@ -59,6 +59,8 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
 
     private static final String PREF_STATUS_BAR_HEADSET = "pref_status_bar_headset";
 
+    private static final String STATUSBAR_HIDE_ALARM = "statusbar_hide_alarm";
+
     private ListPreference mStatusBarAmPm;
 
     private ListPreference mStatusBarCmSignal;
@@ -71,13 +73,15 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
 
     private ListPreference mStatusBarCarrierLabel;
 
-    private CheckBoxPreference mStatusBarClock;
+    private ListPreference mStatusBarClock;
 
     private CheckBoxPreference mStatusBarCompactCarrier;
 
     private CheckBoxPreference mStatusBarBrightnessControl;
 
     private CheckBoxPreference mStatusBarHeadset;
+
+    private CheckBoxPreference mHideAlarm;
 
     private EditTextPreference mStatusBarCarrierLabelCustom;
 
@@ -90,7 +94,6 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        mStatusBarClock = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_CLOCK);
         mStatusBarCompactCarrier = (CheckBoxPreference) prefSet
                 .findPreference(PREF_STATUS_BAR_COMPACT_CARRIER);
         mStatusBarCmBattery = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_CM_BATTERY);
@@ -101,15 +104,16 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
         mStatusBarBrightnessControl = (CheckBoxPreference) prefSet
                 .findPreference(PREF_STATUS_BAR_BRIGHTNESS_CONTROL);
         mStatusBarHeadset = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_HEADSET);
+        mHideAlarm = (CheckBoxPreference) prefSet.findPreference(STATUSBAR_HIDE_ALARM);
 
-        mStatusBarClock.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUS_BAR_CLOCK, 1) == 1));
         mStatusBarCompactCarrier.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_COMPACT_CARRIER, 0) == 1));
         mStatusBarBrightnessControl.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_BRIGHTNESS_TOGGLE, 0) == 1));
         mStatusBarHeadset.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_HEADSET, 1) == 1));
+        mHideAlarm.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUSBAR_HIDE_ALARM, 0) == 1));
 
         try {
             if (Settings.System
@@ -120,8 +124,14 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
         } catch (SettingNotFoundException e) {
         }
 
+        mStatusBarClock = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_CLOCK);
         mStatusBarAmPm = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_AM_PM);
         mStatusBarCmSignal = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_CM_SIGNAL);
+
+        int statusBarClock = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CLOCK, 1);
+        mStatusBarClock.setValue(String.valueOf(statusBarClock));
+        mStatusBarClock.setOnPreferenceChangeListener(this);
 
         int statusBarAmPm = Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_AM_PM, 2);
@@ -184,7 +194,12 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mStatusBarAmPm) {
+        if (preference == mStatusBarClock) {
+            int statusBarClock = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.STATUS_BAR_CLOCK,
+                    statusBarClock);
+            return true;
+        } else if (preference == mStatusBarAmPm) {
             int statusBarAmPm = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(), Settings.System.STATUS_BAR_AM_PM,
                     statusBarAmPm);
@@ -239,12 +254,7 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
         boolean value;
 
         /* Preference Screens */
-        if (preference == mStatusBarClock) {
-            value = mStatusBarClock.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.STATUS_BAR_CLOCK,
-                    value ? 1 : 0);
-            return true;
-        } else if (preference == mStatusBarCompactCarrier) {
+        if (preference == mStatusBarCompactCarrier) {
             value = mStatusBarCompactCarrier.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_COMPACT_CARRIER, value ? 1 : 0);
@@ -257,6 +267,11 @@ public class UIStatusBarActivity extends PreferenceActivity implements OnPrefere
         } else if (preference == mStatusBarHeadset) {
             value = mStatusBarHeadset.isChecked();
             Settings.System.putInt(getContentResolver(), Settings.System.STATUS_BAR_HEADSET,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mHideAlarm) {
+            value = mHideAlarm.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.STATUSBAR_HIDE_ALARM,
                     value ? 1 : 0);
             return true;
         } else if (preference == mStatusBarCmBatteryLowBatt) {

@@ -24,6 +24,13 @@
                 android:targetClass="com.cyanogenmod.cmparts.activities.UIStatusBarActivity" />
         </PreferenceScreen>
 
+        <PreferenceScreen android:key="ui_colors"
+            android:title="@string/ui_colors_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.UIColorsActivity" />
+        </PreferenceScreen>
+
 		<!-- LED notifications -->
 		<PreferenceScreen android:key="trackball_notifications"
 			android:title="@string/trackball_title" android:summary="@string/trackball_summary">

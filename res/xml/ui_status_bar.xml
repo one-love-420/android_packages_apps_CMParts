@@ -3,10 +3,12 @@
 
 	<!-- Status bar tweaks -->
 	<PreferenceCategory android:title="@string/general_title">
-		<CheckBoxPreference android:key="pref_status_bar_clock"
+		<ListPreference android:key="pref_status_bar_clock"
+			android:dialogTitle="@string/ui_status_bar_clock_title"
 			android:title="@string/ui_status_bar_clock_title"
 			android:summary="@string/ui_status_bar_clock_summary"
-			android:defaultValue="true" />
+			android:entries="@array/entries_status_bar_clock"
+			android:entryValues="@array/values_status_bar_clock" />
 		<ListPreference android:key="pref_status_bar_am_pm"
 			android:dialogTitle="@string/ui_status_bar_am_pm_title"
 			android:title="@string/ui_status_bar_am_pm_title"
@@ -59,6 +61,10 @@
 			android:title="@string/ui_status_bar_headset_title"
 			android:summary="@string/ui_status_bar_headset_summary"
 			android:defaultValue="true" />
+		<CheckBoxPreference android:key="statusbar_hide_alarm"
+			android:title="@string/ui_status_bar_hide_alarm_title"
+			android:summary="@string/ui_status_bar_hide_alarm_summary"
+			android:defaultValue="falses" />
 	</PreferenceCategory>
 
 </PreferenceScreen>

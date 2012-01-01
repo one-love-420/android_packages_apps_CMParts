@@ -75,6 +75,18 @@
 	<item>3</item>
     </string-array>
 
+    <string-array name="entries_status_bar_clock">
+        <item>Hide</item>
+        <item>Right (Default)</item>
+        <item>Center</item>
+    </string-array>
+
+    <string-array name="values_status_bar_clock" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <string-array name="entries_status_bar_am_pm">
         <item>Normal</item>
         <item>Small</item>
@@ -579,6 +591,9 @@
         <item>Rotary revamped</item>
         <item>Lense</item>
         <item>Ring</item>
+        <item>Circle</item>
+        <item>Halo</item>
+        <item>Sense</item>
     </string-array>
 
     <string-array name="pref_lockscreen_style_values" translatable="false">
@@ -587,6 +602,9 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
     </string-array>
 
     <string-array name="pref_in_call_style_entries">
@@ -723,6 +741,22 @@
         <item>@string/phone_goggles_maths_level_easy</item>
         <item>@string/phone_goggles_maths_level_medium</item>
         <item>@string/phone_goggles_maths_level_hard</item>
+    </string-array>
+
+    <string-array name="swap_volume_keys_orientation_list_entries" translatable="true">
+        <item>Never</item>
+        <item>0-degrees</item>
+        <item>90-degrees</item>
+        <item>180-degrees</item>
+        <item>270-degrees</item>
+    </string-array>
+
+    <string-array name="swap_volume_keys_orientation_list_values" translatable="false">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 
     <string-array name="entries_vol_actions">

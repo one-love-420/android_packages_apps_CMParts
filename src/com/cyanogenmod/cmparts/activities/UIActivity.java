@@ -59,6 +59,8 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
     private PreferenceScreen mNotificationScreen;
 
+    private PreferenceScreen mColorsScreen;
+
     private PreferenceScreen mTrackballScreen;;
 
     private PreferenceScreen mExtrasScreen;
@@ -193,6 +195,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             return true;
         } else if (preference == mNotificationScreen) {
             startActivity(mNotificationScreen.getIntent());
+            return true;
+        } else if (preference == mColorsScreen) {
+            startActivity(mColorsScreen.getIntent());
             return true;
         } else if (preference == mTrackballScreen) {
             startActivity(mTrackballScreen.getIntent());

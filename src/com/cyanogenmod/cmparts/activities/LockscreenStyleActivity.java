@@ -115,7 +115,10 @@ public class LockscreenStyleActivity extends PreferenceActivity implements
         Rotary,
         RotaryRevamped,
         Lense,
-        Ring;
+        Ring,
+        Circle,
+        Halo,
+        Sense;
 
         static public LockscreenStyle getStyleById(int id){
             switch (id){
@@ -129,6 +132,12 @@ public class LockscreenStyleActivity extends PreferenceActivity implements
                     return Lense;
                 case 5:
                     return Ring;
+                case 6:
+                    return Circle;
+                case 7:
+                    return Halo;
+                case 8:
+                    return Sense;
                 default:
                     return Ring;
             }
@@ -150,6 +159,12 @@ public class LockscreenStyleActivity extends PreferenceActivity implements
                     return 4;
                 case Ring:
                     return 5;
+                case Circle:
+                    return 6;
+                case Halo:
+                    return 7;
+                case Sense:
+                    return 8;
                 default:
                     return 5;
             }
@@ -696,3 +711,4 @@ public class LockscreenStyleActivity extends PreferenceActivity implements
         return items.toArray(new String[0]);
     }
 }
+

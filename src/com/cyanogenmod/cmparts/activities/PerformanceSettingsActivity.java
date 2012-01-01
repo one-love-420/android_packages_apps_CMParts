@@ -88,6 +88,12 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
 
     private static final String PURGEABLE_ASSETS_DEFAULT = "0";
 
+    private static final String DISABLE_BOOTANIMATION_PREF = "pref_disable_bootanimation";
+
+    private static final String DISABLE_BOOTANIMATION_PERSIST_PROP = "persist.sys.nobootanimation";
+
+    private static final String DISABLE_BOOTANIMATION_DEFAULT = "0";
+
     private static final String LOCK_HOME_PREF = "pref_lock_home";
 
     private static final String LOCK_MMS_PREF = "pref_lock_mms";
@@ -113,6 +119,8 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
     private CheckBoxPreference mUse16bppAlphaPref;
 
     private CheckBoxPreference mPurgeableAssetsPref;
+
+    private CheckBoxPreference mDisableBootanimPref;
 
     private CheckBoxPreference mLockHomePref;
 
@@ -170,6 +178,10 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
                 SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
         mHeapsizePref.setOnPreferenceChangeListener(this);
 
+        mDisableBootanimPref = (CheckBoxPreference) prefSet.findPreference(DISABLE_BOOTANIMATION_PREF);
+        String disableBootanimation = SystemProperties.get(DISABLE_BOOTANIMATION_PERSIST_PROP, DISABLE_BOOTANIMATION_DEFAULT);
+        mDisableBootanimPref.setChecked("1".equals(disableBootanimation));
+
         mLockHomePref = (CheckBoxPreference) prefSet.findPreference(LOCK_HOME_PREF);
         mLockHomePref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCK_HOME_IN_MEMORY, LOCK_HOME_DEFAULT) == 1);
@@ -220,6 +232,12 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         if (preference == mPurgeableAssetsPref) {
             SystemProperties.set(PURGEABLE_ASSETS_PERSIST_PROP,
                     mPurgeableAssetsPref.isChecked() ? "1" : "0");
+            return true;
+        }
+
+        if (preference == mDisableBootanimPref) {
+            SystemProperties.set(DISABLE_BOOTANIMATION_PERSIST_PROP,
+                    mDisableBootanimPref.isChecked() ? "1" : "0");
             return true;
         }
 
@@ -283,7 +301,6 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
                     PrintWriter pw = new PrintWriter(p.getOutputStream());
                     pw.println("busybox mount -o remount,rw /system");
                     pw.println("mv /tmp/build.prop /system/build.prop");
-                    pw.println("exit");
                     pw.close();
 
                 }catch(Exception e) { e.printStackTrace(); }

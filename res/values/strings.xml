@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Generic -->
-    <string name="app_name">CyanogenMod settings</string>
+    <string name="app_name">Extended settings</string>
 
     <!--  Primary Screen Settings -->
     <string name="application_settings_title_head">Application</string>
@@ -89,12 +89,31 @@
     <string name="pref_rotation_180_title">180 degrees</string>
     <string name="pref_rotation_270_title">270 degrees</string>
 
+    <!-- User interface: Text color tweaks -->
+    <string name="ui_colors_title">Text color tweaks</string>
+    <string name="status_bar_color_title">Status bar</string>
+    <string name="title_clock_color">Clock color</string>
+    <string name="title_date_color">Date color</string>
+    <string name="title_ticker_color">Ticker color</string>
+    <string name="title_battery_percent_color">Battery percentage color</string>
+    <string name="title_signaltext_color">Signal text color</string>
+    <string name="notification_title">Notifications</string>
+    <string name="title_carrier_color">Carrier color</string>
+    <string name="title_none_color">No notification title color</string>
+    <string name="title_latest_color">Latest notifications title color</string>
+    <string name="title_ongoing_color">Ongoing notifications title color</string>
+    <string name="title_clear_color">Clear button label color</string>
+    <string name="notification_items_title">Notification items</string>
+    <string name="title_item_title_color">Notification title color</string>
+    <string name="title_item_text_color">Notification item color</string>
+    <string name="title_item_time_color">Notification time color</string>
+
     <!-- User interface: Status bar tweaks -->
     <string name="ui_status_bar_title">Status bar tweaks</string>
     <string name="ui_status_bar_am_pm_title">AM/PM style</string>
     <string name="ui_status_bar_am_pm_summary">Display style of AM/PM next to clock</string>
-    <string name="ui_status_bar_clock_title">Show clock</string>
-    <string name="ui_status_bar_clock_summary">Status bar clock will be hidden, if disabled</string>
+    <string name="ui_status_bar_clock_title">Clock position</string>
+    <string name="ui_status_bar_clock_summary">Display status bar clock position. </string>
     <string name="ui_status_bar_cm_battery_title">Battery style</string>
     <string name="ui_status_bar_cm_battery_summary">Change battery style. Set to \'Default\' if themes make this look broken</string>
     <string name="ui_status_bar_cm_battery_color_title">Status bar battery color</string>
@@ -121,6 +140,8 @@
     <string name="ui_status_bar_cm_signal_text_show_text_dbm">Signal text w/dBm</string>
     <string name="ui_status_bar_headset_title">Show headset icon</string>
     <string name="ui_status_bar_headset_summary">Headset icon will appear when headset is plugged in</string>
+    <string name="ui_status_bar_hide_alarm_title">Hide Alarm Icon</string>
+    <string name="ui_status_bar_hide_alarm_summary">Hide the alarm icon when alarm is set</string>
 
     <!-- User interface : LED Notifications -->
     <string name="trackball_title">LED notifications</string>
@@ -462,6 +483,10 @@
     <string name="pref_heapsize_title">VM heap size</string>
     <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
 
+    <!-- Performance : Disable bootanimation -->
+    <string name="pref_disable_bootanimation_title">Disable boot animation</string>
+    <string name="pref_disable_bootanimation_summary">Don\'t show the boot animation for faster boot</string>
+
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Lock home in memory</string>
     <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
@@ -662,6 +687,8 @@
     <string name="sound_notifications_limitvol_dialog">Notification volume</string>
     <string name="sound_rings_limitvol_dialog">Ring tone volume</string>
     <string name="sound_alarms_limitvol_dialog">Alarm volume</string>
+    <string name="sound_swap_volume_keys_dialog">Swap volume keys</string>
+    <string name="sound_swap_volume_keys_title">Swap volume keys</string>
 
     <!-- Quiet hours -->
     <string name="sound_category_quiet_hours_title">Quiet hours</string>
