@@ -78,6 +78,13 @@
                 <category android:name="com.cyanogenmod.cmparts.SHORTCUT" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.UIColorsActivity"
+            android:label="@string/ui_colors_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.cyanogenmod.cmparts.SHORTCUT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.led.NotificationActivity"
             android:label="@string/trackball_title">
             <intent-filter>
