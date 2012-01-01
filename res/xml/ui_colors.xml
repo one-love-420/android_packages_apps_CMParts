@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- Status bar color tweaks -->
+	<PreferenceCategory android:title="@string/status_bar_color_title">		
+		<Preference android:key="color_clock"
+			android:title="@string/title_clock_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_date"
+			android:title="@string/title_date_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_ticker_text"
+			android:title="@string/title_ticker_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_battery_percent"
+			android:title="@string/title_battery_percent_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_signaltext_value"
+			android:title="@string/title_signaltext_color"
+			android:defaultValue="-1" />
+	</PreferenceCategory>
+
+        <!-- Notification color tweaks -->
+	<PreferenceCategory android:title="@string/notification_title">		
+		<Preference android:key="color_label_plmn"
+			android:title="@string/title_carrier_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_notification_none"
+			android:title="@string/title_none_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_notification_latest"
+			android:title="@string/title_latest_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_notification_ongoing"
+			android:title="@string/title_ongoing_color"
+			android:defaultValue="-1" />
+		<Preference android:key="color_clear_button"
+			android:title="@string/title_clear_color"
+			android:defaultValue="-16777216" />
+	</PreferenceCategory>
+
+        <!-- Notification item color tweaks -->
+	<PreferenceCategory android:title="@string/notification_items_title">		
+		<Preference android:key="color_notification_item_title"
+			android:title="@string/title_item_title_color"
+			android:defaultValue="-16777216" />
+		<Preference android:key="color_notification_item_text"
+			android:title="@string/title_item_text_color"
+			android:defaultValue="-16777216" />
+		<Preference android:key="color_notification_item_time"
+			android:title="@string/title_item_time_color"
+			android:defaultValue="-16777216" />
+	</PreferenceCategory>
+
+</PreferenceScreen>
