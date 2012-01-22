@@ -335,7 +335,6 @@
                 android:resource="@xml/appwidget_info" />
         </receiver>
 
-        <service android:name=".service.BootService" />
         <service android:enabled="true" android:name=".services.RenderFXService" />
         <service android:enabled="true" android:name=".services.BatteryService" />
     </application>
