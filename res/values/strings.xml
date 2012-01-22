@@ -499,6 +499,20 @@
     <string name="performance_settings_warning_title">WARNING: Dragons Ahead!</string>
     <string name="performance_settings_warning">The options in here will change the performance of your system, potentially for the worse. They are included for experimentation and we request that you do not file bug reports if you have changed any from the defaults</string>
 
+    <!-- Performance : Voltage Controls -->
+    <string name="voltagecontrol_title">Voltage Control</string>
+    <string name="voltage_title">Voltage Control</string>
+
+    <!-- list_voltage -->
+	<string name="freq">Frequency</string>
+	<string name="current">mV current</string>
+	<string name="saved">mV saved</string>
+
+    <!-- voltage -->
+	<string name="error_values">Error getting values</string>
+	<string name="set_boot">Set On Boot</string>
+	<string name="apply_values">Apply Values</string>
+
     <!-- Application Settings -->
     <string name="application_settings_title">Application settings</string>
 

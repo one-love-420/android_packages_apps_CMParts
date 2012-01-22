@@ -314,6 +314,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activities.VoltageControl" android:label="@string/voltagecontrol_title" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".activities.ChangeLog"
             android:label="@string/changelog_title">
             <intent-filter>
@@ -329,6 +335,7 @@
                 android:resource="@xml/appwidget_info" />
         </receiver>
 
+        <service android:name=".service.BootService" />
         <service android:enabled="true" android:name=".services.RenderFXService" />
         <service android:enabled="true" android:name=".services.BatteryService" />
     </application>

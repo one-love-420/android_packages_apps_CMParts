@@ -11,6 +11,12 @@
                 android:targetClass="com.cyanogenmod.cmparts.activities.CPUActivity" />
         </PreferenceScreen>
 
+	<PreferenceScreen android:key="volt_control" android:title="@string/voltage_title">
+	     <intent android:action="android.intent.action.MAIN"
+		android:targetPackage="com.cyanogenmod.cmparts"
+		android:targetClass="com.cyanogenmod.cmparts.activities.VoltageControl" />
+	</PreferenceScreen>
+
         <ListPreference android:key="pref_compcache_size"
             android:dialogTitle="@string/pref_compcache_title"
             android:title="@string/pref_compcache_title"
