@@ -335,7 +335,14 @@
                 android:resource="@xml/appwidget_info" />
         </receiver>
 
+        <receiver android:name=".services.BootReceiver" >
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <service android:enabled="true" android:name=".services.RenderFXService" />
         <service android:enabled="true" android:name=".services.BatteryService" />
+        <service android:enabled="true" android:name=".services.BootService" />
     </application>
 </manifest>

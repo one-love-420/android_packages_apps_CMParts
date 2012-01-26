@@ -127,8 +127,8 @@ public class VoltageControl extends Activity {
                 final String[] values = line.split("\\s+");
                 if (values != null) {
                     if (values.length >= 2) {
-                        final String freq = values[0].replace("mhz:", "");
-                        final String currentMv = values[1];
+                        final String freq = values[1].replace("mhz:", "");
+                        final String currentMv = values[2];
                         final String savedMv = preferences.getString(freq, currentMv);
                         final Voltage voltage = new Voltage();
                         voltage.setFreq(freq);
